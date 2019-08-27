@@ -1,0 +1,98 @@
+@import "../../scss/_vars";
+
+.ticket-block {
+
+	@media screen and (min-width: $break-size) {
+		display: flex;
+	}
+	@media screen and (min-width: $md) {
+		max-width: 100%;
+	}
+}
+
+.ticket-b {
+	padding: 25px 20px;
+	position: relative;
+	&.ticket-b-v1-mod {
+		border-top: 1px solid #eceff1;
+	}
+	&.ticket-b-v2-mod {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+	@media screen and (min-width: $break-size) {
+		&.ticket-b-v2-mod {
+			order: 1;
+		}
+		&.ticket-b-v1-mod {
+			border-top: none;
+			border-right: 1px solid #eceff1;
+			min-width: 200px;
+		}
+	}
+}
+
+.ticket-b-arrival {
+	text-align: right;
+}
+
+.carrier-logo-w {
+	width: 120px;
+	overflow: hidden;
+	margin: 0 auto 20px;
+}
+
+.carrier-logo {
+	max-width: 100%;
+}
+
+.ticket-time {
+	display: inline-block;
+	font-size: 24px;
+	color: #4a4a4a;
+	margin: 10px 0 0;
+	@media screen and (min-width: $sm) {
+		font-size: 32px;
+	}
+}
+
+.ticket-airport-city {
+	color: #4a4a4a;
+	font-weight: 600;
+}
+
+.ticket-date {
+	font-size: 12px;
+	color: #8b9497;
+}
+
+.ticket-b-stops {
+	font-size: 10px;
+	font-weight: 600;
+	color: #8b9497;
+	text-align: center;
+	text-transform: uppercase;
+	width: 110px;
+	position: absolute;
+	top: 23px;
+	left: calc(50% - 55px);
+	&:before {
+		content: '';
+		position: absolute;
+		background: #d2d5d6;
+		height: 1px;
+		width: 96px;
+		left: 0;
+		top: 20px;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		width: 13px;
+		height: 13px;
+		background: url(../../assets/i/plane.png) no-repeat;
+		right: 0;
+		bottom: -9px;
+	}
+}

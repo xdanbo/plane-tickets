@@ -1,0 +1,8 @@
+@import "../../scss/_vars";
+
+.ticket-l-item {
+	& + & {
+		padding: ($column-gap * 2) 0 0 0;
+	}
+
+}

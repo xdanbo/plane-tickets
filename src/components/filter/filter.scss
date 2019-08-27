@@ -1,0 +1,76 @@
+@import "../../scss/_vars";
+
+.check-only {
+	cursor: pointer;
+	color: $blue;
+	font-size: 11px;
+	font-weight: 600;
+	position: absolute;
+	right: 15px;
+	top: 0;
+	z-index: -1;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.filter-l-item {
+	margin: 0 -15px;
+}
+
+.filter-block {
+	position: relative;
+	padding: 0 15px;
+	height: 36px;
+	background: transparent;
+	line-height: 36px;
+	&:hover {
+		background: #f1fcff;
+		& .check-only {
+			z-index: 1;
+		}
+	}
+}
+
+.checkbox {
+	display: none;
+	&:checked {
+	& +	.checkbox-text {
+			&:before, &:after {
+				border-color: $blue;
+			}
+		}
+	}
+}
+
+.checkbox-text {
+	display: block;
+	position: relative;
+	padding: 0 0 0 30px;
+	cursor: pointer;
+	&:before, &:after {
+		transition: all 0.15s ease-in-out;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 8px;
+		width: 19px;
+		height: 19px;
+		border-radius: 3px;
+		border: 1px solid #d2d5d6;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		display: block;
+		left: 7px;
+		top: 13px;
+    width: 5px;
+    height: 8px;
+    border: solid transparent;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+	}
+}

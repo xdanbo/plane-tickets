@@ -1,0 +1,21 @@
+.container {
+	max-width: $max;
+	margin: 0 auto;
+}
+
+.columns {
+	margin: -$column-gap;
+	@media screen and (min-width: $max) {
+		& {
+			display: flex;
+		}
+	}
+}
+
+.column {
+	display: block;
+	padding: $column-gap;
+	&.col-v2-mod {
+		flex: 1;
+	}
+}
